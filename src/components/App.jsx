@@ -8,8 +8,10 @@ import friends from "./friends.json";
 const App = () => {
   return (
     <>
-      <Profile {...userData}></Profile>
-      <FriendList friends={friends} />
+      <div className="container">
+        <Profile {...userData}></Profile>
+        <FriendList friends={friends} />
+      </div>
     </>
   );
 };

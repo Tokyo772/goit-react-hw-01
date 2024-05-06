@@ -4,7 +4,7 @@ import clsx from "clsx";
 const FriendList = ({ friends }) => {
   return (
     <>
-      <ul>
+      <ul className={css.friendList}>
         {friends.map(({ id, name, isOnline, avatar }) => {
           return (
             <li key={id} className={css.friendCard}>
@@ -17,8 +17,8 @@ const FriendList = ({ friends }) => {
               <p className={css.friendName}>{name}</p>
               <p
                 className={clsx(css.friendStatus, {
-                  red: isOnline,
-                  green: !isOnline,
+                  [css.red]: !isOnline,
+                  [css.green]: isOnline,
                 })}
               >
                 {isOnline ? "Online" : "Offline"}

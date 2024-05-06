@@ -1,3 +1,7 @@
+.friendList {
+  display: flex;
+  gap: 20px;
+}
 .friendCard {
   width: 100px;
   border: 1px solid #ccc;
@@ -13,11 +17,14 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
+
+  margin: auto;
 }
 
 .friendName {
   color: #333;
   margin: 5px 0;
+  font-weight: bold;
 }
 
 .friendStatus {
