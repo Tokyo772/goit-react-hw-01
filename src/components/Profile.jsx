@@ -1,27 +1,27 @@
 import css from "./Profile.module.css";
 
-const Profile = ({ name, tag, location, avatar, stats }) => {
+const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={css.cardContainer}>
+      <div className={css.userInfo}>
+        <img src={avatar} alt="User avatar" className={css.avatar} />
+        <p className={css.name}>{username} </p>
+        <p className={css.tag}>@{tag}</p>
+        <p className={css.location}>{location}</p>
       </div>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{stats.followers}</span>
+      <ul className={css.stats}>
+        <li className={css.statsItem}>
+          <span className={css.statsTitle}>Followers</span>
+          <span className={css.statsValue}>{stats.followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{stats.views}</span>
+        <li className={css.statsItem}>
+          <span className={css.statsTitle}>Views</span>
+          <span className={css.statsValue}>{stats.views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{stats.likes}</span>
+        <li className={css.statsItem}>
+          <span className={css.statsTitle}>Likes</span>
+          <span className={css.statsValue}>{stats.likes}</span>
         </li>
       </ul>
     </div>
