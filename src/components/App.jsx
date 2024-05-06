@@ -1,7 +1,13 @@
 import "./App.css";
+import Profile from "./Profile";
+import userData from "../userData.json";
 
-function App() {
-  return <></>;
-}
+const App = () => {
+  return (
+    <>
+      <Profile {...userData}></Profile>
+    </>
+  );
+};
 
 export default App;
