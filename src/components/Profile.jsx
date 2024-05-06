@@ -1,11 +1,11 @@
 import css from "./Profile.module.css";
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+const Profile = ({ name, tag, location, image, stats }) => {
   return (
     <div className={css.cardContainer}>
       <div className={css.userInfo}>
-        <img src={avatar} alt="User avatar" className={css.avatar} />
-        <p className={css.name}>{username} </p>
+        <img src={image} alt="User avatar" className={css.avatar} />
+        <p className={css.name}>{name} </p>
         <p className={css.tag}>@{tag}</p>
         <p className={css.location}>{location}</p>
       </div>

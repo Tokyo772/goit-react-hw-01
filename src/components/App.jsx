@@ -13,7 +13,13 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <Profile {...userData}></Profile>
+        <Profile
+          name={userData.username}
+          tag={userData.tag}
+          location={userData.location}
+          image={userData.avatar}
+          stats={userData.stats}
+        ></Profile>
         <FriendList friends={friends} />
         <TransactionHistory items={transactions} />
       </div>
